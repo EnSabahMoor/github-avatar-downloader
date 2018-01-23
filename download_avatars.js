@@ -19,16 +19,21 @@ function getRepoContributors(repoOwner, repoName, cb) {
   });
 }
 
+function downloadImageByURL(url, filePath) {
+
+}
+
 function objBuilder(err, result) {
   if (err) {
     console.log("Errors:", err);
   }
   else {
     var list = result.map(function (obj) {
-      return {
-        user: obj.login,
-        url: obj.avatar_url
-      }
+      downloadImageByURL(obj.avatar_url, "images/" + obj.login + ".jpg")
+      // return {
+      //   user: obj.login,
+      //   url: obj.avatar_url
+      // }
     });
   }
   console.log(list)
