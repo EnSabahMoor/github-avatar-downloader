@@ -1,3 +1,6 @@
+secrets.js
+GIT_TOKEN.env
+gittoken.env
 # Logs
 logs
 *.log
